@@ -96,9 +96,20 @@ nav {
     }
   }
 }
-main p {
-  font-size: var(--type-sm);
-  color: var(--grey-dark-md);
-  margin-block-start: 0.25rem;
-  margin-block-end: 1rem;
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  & p {
+    font-size: var(--type-sm);
+    color: var(--grey-dark-md);
+    margin-block-start: 0.25rem;
+    margin-block-end: 1rem;
+  }
+}
+@media (width > 60rem) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
 }
