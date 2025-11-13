@@ -13,12 +13,12 @@
 
   --radius: 0.5rem;
 
-  --type-xxl: clamp(1.476rem, 5.291vi, 3.815rem);
-  --type-xl: clamp(1.383rem, 4.435vi, 3.052rem);
-  --type-lg: clamp(1.296rem, 3.737vi, 2.441rem);
-  --type-md: clamp(1.215rem, 3.168vi, 1.953rem);
-  --type-sm: clamp(1.138rem, 2.701vi, 1.563rem);
-  --type-xs: clamp(1.067rem, 2.317vi, 1.25rem);
+  --type-xxl: clamp(1.476rem, 9.469vi, 7.993rem);
+  --type-xl: clamp(1.383rem, 7.036vi, 5.653rem);
+  --type-lg: clamp(1.296rem, 5.294vi, 3.998rem);
+  --type-md: clamp(1.215rem, 4.042vi, 2.827rem);
+  --type-sm: clamp(1.138rem, 3.137vi, 1.999rem);
+  --type-xs: clamp(1.067rem, 2.481vi, 1.414rem);
 }
 * {
   box-sizing: border-box;
@@ -46,30 +46,29 @@ h1 {
   padding: 0.5rem 2rem;
 }
 h2 {
-  font-size: var(--type-xl);
-  color: var(--primary);
-}
-h3 {
   font-size: var(--type-lg);
 }
-h4 {
+h3 {
   font-size: var(--type-md);
 }
-main,
-nav {
+h4 {
+  font-size: var(--type-sm);
+}
+main {
   padding: 1rem 2rem;
 }
 nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 0.25rem 2rem;
   align-items: center;
   gap: 2rem;
   background-color: var(--secondary);
   a {
     flex-wrap: nowrap;
     flex-shrink: 0;
-    font-size: var(--type-md);
+    font-size: var(--type-sm);
   }
   a:link,
   a:active,
@@ -91,7 +90,7 @@ nav {
     text-align: center;
 
     a {
-      font-size: var(--type-lg);
+      font-size: var(--type-md);
       border-bottom: 1px dotted var(--grey-dark-md);
       text-underline-offset: 5px;
     }
@@ -113,7 +112,8 @@ nav {
     border: none;
     font-family: var(--ff-primary);
     font-weight: 300;
-    background-image: url(../img/search.png);
+    background-image: url(../img/search.svg);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: 5px center;
   }
@@ -124,7 +124,7 @@ main {
   gap: 2rem;
 
   & p {
-    font-size: var(--type-sm);
+    font-size: var(--type-xs);
     color: var(--grey-dark-md);
     margin-block-start: 0.25rem;
     margin-block-end: 1rem;
